@@ -6,6 +6,7 @@
 #include "Character/CCharacter.h"
 #include "CPlayerCharacter.generated.h"
 
+struct FInputActionValue;
 /**
  * 
  */
@@ -34,4 +35,9 @@ private:
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Input")
 	class UInputAction* JumpInputAction;
+	
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* LookInputAction;
+	
+	void HandleLookInput(const FInputActionValue& InputActionValue);
 };
