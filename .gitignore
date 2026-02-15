@@ -64,5 +64,6 @@ Saved/
 *~
 
 #AssetFiles
-Content/
-!Content/Blueprint
+Content/**
+!Content/Blueprint/
+!Content/Blueprint/**
