@@ -62,3 +62,7 @@ Saved/
 # Autosave files
 *.tmp
 *~
+
+#AssetFiles
+Content/
+!Content/Blueprint
