@@ -2,11 +2,16 @@
 
 
 #include "Character/CCharacter.h"
+#include "AbilitySystem/CAbilitySystemComponent.h"
+#include "AbilitySystem/CAttributeSet.h"
 
 ACCharacter::ACCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	
+	CAbilitySystemComponent = CreateDefaultSubobject<UCAbilitySystemComponent>(TEXT("CAbilitySystemComponent"));
+	CAttributeSet = CreateDefaultSubobject<UCAttributeSet>(TEXT("CAttributeSet"));
 }
 
 void ACCharacter::BeginPlay()
@@ -22,4 +27,10 @@ void ACCharacter::Tick(float DeltaTime)
 void ACCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+}
+
+
+UAbilitySystemComponent* ACCharacter::GetAbilitySystemComponent() const
+{
+	return CAbilitySystemComponent;
 }
