@@ -22,21 +22,21 @@ class UCAttributeSet : public UAttributeSet
 	GENERATED_BODY()
 
 public:
-	ATTRIBUTE_ACCESSORS(UCAttributeSet, HealthAttribute)
-	ATTRIBUTE_ACCESSORS(UCAttributeSet, MaxHealthAttribute)
-	ATTRIBUTE_ACCESSORS(UCAttributeSet, ManaAttribute)
-	ATTRIBUTE_ACCESSORS(UCAttributeSet, MaxManaAttribute)
+	ATTRIBUTE_ACCESSORS(UCAttributeSet, Health)
+	ATTRIBUTE_ACCESSORS(UCAttributeSet, MaxHealth)
+	ATTRIBUTE_ACCESSORS(UCAttributeSet, Mana)
+	ATTRIBUTE_ACCESSORS(UCAttributeSet, MaxMana)
 
 private:
 	UPROPERTY()
-	FGameplayAttributeData HealthAttribute;
+	FGameplayAttributeData Health;
 
 	UPROPERTY()
-	FGameplayAttributeData MaxHealthAttribute;
+	FGameplayAttributeData MaxHealth;
 
 	UPROPERTY()
-	FGameplayAttributeData ManaAttribute;
+	FGameplayAttributeData Mana;
 
 	UPROPERTY()
-	FGameplayAttributeData MaxManaAttribute;
+	FGameplayAttributeData MaxMana;
 };
