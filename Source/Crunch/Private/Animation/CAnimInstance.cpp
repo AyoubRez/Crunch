@@ -3,6 +3,7 @@
 
 #include "Animation/CAnimInstance.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 
 void UCAnimInstance::NativeInitializeAnimation()
@@ -35,6 +36,11 @@ void UCAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 				YawSpeed,
 				DeltaSeconds,
 				YawSpeedSmoothLerpSpeed);
+	}
+
+	if (OwnerCharacterMovementComp)
+	{
+		bIsFalling = OwnerCharacterMovementComp->IsFalling();
 	}
 }
 
